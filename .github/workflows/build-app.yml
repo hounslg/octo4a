@@ -33,7 +33,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Unsighed app
-          path: ./app/build/outputs/apk
+          path: ./app/build/
       - name: Get the version
         if: startsWith(github.ref, 'refs/tags/')
         id: get_version
