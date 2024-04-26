@@ -5,11 +5,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Setup ndk
         uses: nttld/setup-ndk@v1
         with:
           ndk-version: r21d
+
+          
       - name: Build the app
         run: |
           ./gradlew assembleRelease
